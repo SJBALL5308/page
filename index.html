@@ -1,0 +1,690 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>work</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="14269d13-7c25-4048-a1e7-539d7f5f293e" class="page sans"><header><h1 class="page-title">work</h1></header><div class="page-body"><h3 id="9a3951f3-19d1-4c87-b166-db89b439e66e" class="">ติดตั้ง Xampp </h3><p id="ef590190-9c7c-4911-8227-39bc14f503e4" class="">ดับเบิลคลิกไฟล์ที่เพิ่ง Download มา เพื่อติดตั้งโปรแกรม</p><figure id="b32470bd-ef79-4749-8351-cfd73492c9a1" class="image"><a href="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-4.jpg"><img src="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-4.jpg"/></a></figure><p id="34289cdf-8b39-4fc6-97b0-f66bb0d21659" class="">ถ้ามีการติดตั้งโปรแกรมป้องกันไวรัสเอาไว้ อาจจะมี popup แจ้งเตือนขึ้นมา ให้ตอบ Yes</p><figure id="aa8ec759-e10e-4d2d-912c-4500bca01641" class="image"><a href="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-5.jpg"><img src="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-5.jpg"/></a></figure><p id="28592ee9-4454-4ddf-9de6-16ff571ea4ef" class="">ให้คลิกที่ Next</p><figure id="eac8a375-434c-44fe-b769-4611592c45e2" class="image"><a href="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-7.jpg"><img src="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-7.jpg"/></a></figure><p id="eea75a31-7f1a-413a-8af4-f2d7fe000b87" class="">หน้านี้ไม่ต้องแก้ไขใดๆ ให้คลิก Next</p><figure id="e6efadd3-a6d5-4a6b-b5c1-e923a452d14d" class="image"><a href="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-8.jpg"><img src="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-8.jpg"/></a></figure><p id="36cbb080-44dc-4253-87e0-8ecee19b940c" class="">ให้คลิกที่ Next</p><figure id="c7647a8d-3744-4681-b8bf-e4102044e3c7" class="image"><a href="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-9.jpg"><img src="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-9.jpg"/></a></figure><p id="9952a8da-0865-43be-a4c6-366bafb4879c" class="">ภาษาของตัวโปรแกรม ไม่ต้องแก้ไขใดๆ ให้คลิก Next</p><figure id="bab13b74-9896-4fc0-a3bf-3c0f792f0d1c" class="image"><a href="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-10.jpg"><img src="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-10.jpg"/></a></figure><p id="b54e8ba2-2742-462a-bf4a-da8d3fc4c527" class="">หน้านี้ให้คลิกที่ Next</p><figure id="b8c7b111-8b95-4188-a59a-cad1d023d9ae" class="image"><a href="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-11.jpg"><img src="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-11.jpg"/></a></figure><p id="76c98271-fe22-4a55-9c02-8d589030cb47" class="">หน้านี้ให้คลิก Next เพื่อเริ่มการ Install</p><figure id="aa765b4a-2604-4491-be81-d799fb3e2dc6" class="image"><a href="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-12.jpg"><img src="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-12.jpg"/></a></figure><p id="665fad34-a24f-4609-9b9f-244ace11aca5" class="">รอจนติดตั้งโปรแกรมเสร็จ ให้คลิกที่ Finish ตัว Control Panel จะถูกเปิดขึ้นมา</p><figure id="6e2bab9a-bdf4-48db-a414-04b69882af7d" class="image"><a href="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-16.jpg"><img src="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-16.jpg"/></a></figure><h3 id="8da555b0-1fc5-4d73-a9a8-b7a91bbd2442" class="">3. เปิดใช้งานโปรแกรม</h3><p id="5e121236-14c7-4a54-8a6c-a1983a933e81" class="">Control Panel ของ Xampp จะแสดงผลเป็นหน้าต่างขนาดเล็ก ให้คลิกที่ปุ่ม Start ที่ Apache กับ MySQL เพื่อเปิด Service ให้พร้อมใช้งาน</p><figure id="860bbc13-e5e3-4f6f-a1fd-5b030d19f4db" class="image"><a href="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-17.jpg"><img src="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-17.jpg"/></a></figure><p id="27a8ac1a-9007-40da-b7ed-a0b7d0117207" class="">ให้สังเกตถ้า Service Apache กับ MySQL เปิดเรียบร้อยแล้ว จะมีแถบสีเขียวที่ข้อความ สามารถกดปุ่ม x ที่มุมขวาบนเพื่อย่อเก็บ popup ได้เลย</p><figure id="3e5f7122-2109-45ea-a175-de802350109f" class="image"><a href="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-18.jpg"><img src="https://fastclick.co.th/wp-content/uploads/2021/03/xampp-18.jpg"/></a></figure><p id="7a8c5059-9242-4709-9916-505622097fea" class="">
+</p><p id="b7ede29b-38ce-4d27-a262-c82f8f44a408" class="">
+</p><hr id="c27191a1-9182-4de8-a962-13400b158709"/><h1 id="e8fb2c8c-5f46-4ad1-936e-d59cd4adea91" class="">การติดตั้ง WordPress</h1><h1 id="ba4f5a34-57a3-4a6e-8aa5-8866487b2982" class=""><strong><strong>Step 1 : </strong></strong>การติดตั้ง WordPress บน Xampp</h1><p id="9b817e70-febc-4c6a-9c04-c859ea2bb017" class="">1.<strong><strong>โยน ไฟล์ ใน folder wordpress ทุกอย่างเข้าไปที่ path: XAMPP/htdocs/</strong></strong></p><p id="b0fbc79d-eec3-4bfb-9a94-12f34f387c66" class="">2.<strong><strong>start Apache และ MySQL</strong></strong></p><figure id="7e04bf6d-6c8e-44cc-a6c8-025b12605d4e" class="image"><a href="work%2014269d137c254048a1e7539d7f5f293e/Untitled.png"><img style="width:840px" src="work%2014269d137c254048a1e7539d7f5f293e/Untitled.png"/></a></figure><p id="a2e281f7-4383-420e-bc7c-9222cbfd5897" class="">3.</p><p id="39aac13f-f8ee-4cb6-a1bd-24b0013bf58f" class="">4. ดำเนินการสร้าง MySQL Database และ Database User เพื่อใช้เป็นข้อมูลระหว่างทำขั้นตอน Install WordPress<div class="indented"><ul id="f40c9274-a54b-40b5-9801-9e8bdf99db70" class="bulleted-list"><li style="list-style-type:disc">ใช้ browser เรียก XAMPP ขึ้นมา โดยพิมพ์ localhost ที่ช่อง url แล้วกด Enter</li></ul><ul id="607a1051-a35e-4738-8e18-f10a96bc91fe" class="bulleted-list"><li style="list-style-type:disc">เข้าไปที่ เมนู phpMyAdmin เพื่อเข้าไปสร้าง database</li></ul><ul id="ebef6852-2560-47cd-a298-d1ec7500fc6e" class="bulleted-list"><li style="list-style-type:disc">• คลิกที่ tab Database</li></ul><figure id="6544f4ef-1f6b-4893-b85e-a392888c2e4d" class="image"><a href="work%2014269d137c254048a1e7539d7f5f293e/Untitled%201.png"><img style="width:900px" src="work%2014269d137c254048a1e7539d7f5f293e/Untitled%201.png"/></a></figure><ul id="89ba9bc5-ac14-4635-9f80-6e6d19beda19" class="bulleted-list"><li style="list-style-type:disc">ใส่ชื่อ database : wordpress<p id="43a37bb9-d4c0-4319-bc41-002a9f24bed5" class=""> แล้วเลือก collation เป็น utf8_general_ci// ตั้งแต่ WordPress 4.2 ขึ้นไปเลือก collation เป็น utf8mb4_unicode_ci</p></li></ul><ul id="40096381-e50e-4e9f-bc57-9f30f2714cbf" class="bulleted-list"><li style="list-style-type:disc">กด Create แล้วสังเกตที่ด้านซ้าย database ที่เราสร้างเมื่อกี้เข้ามาละ</li></ul></div></p><figure id="11cf67e6-958d-4502-afc0-7672cef21804" class="image"><a href="work%2014269d137c254048a1e7539d7f5f293e/Untitled%202.png"><img style="width:900px" src="work%2014269d137c254048a1e7539d7f5f293e/Untitled%202.png"/></a></figure><figure id="81074d01-063c-47dc-880f-a7c1eb9256ba" class="image"><a href="work%2014269d137c254048a1e7539d7f5f293e/Untitled%203.png"><img style="width:954px" src="work%2014269d137c254048a1e7539d7f5f293e/Untitled%203.png"/></a></figure><p id="d6e119a0-f298-490b-8c91-0c4ac90baa6b" class="">
+</p><p id="2ad1bae5-e957-46e6-b9c0-8307f4edded4" class="">
+</p><h1 id="6fa2e251-dfff-4503-9f64-1b621dd7679a" class=""><strong><strong>Step 2 : เรียกหน้า Install WordPress ขึ้นมา</strong></strong></h1><p id="f8f2679a-0f74-44d0-8539-acaff3e013b0" class="">5. เรียกเวบไซต์ของคุณ เลือกภาษาที่ต้องการ แล้วคลิ๊กปุ่ม</p><figure id="5403d3a4-3021-4e18-9c96-1f57eafbf34c" class="image"><a href="https://netway.co.th/images/kb/115001388152/mceclip1.png"><img style="width:144px" src="https://netway.co.th/images/kb/115001388152/mceclip1.png"/></a></figure><figure id="46324a32-7163-4b46-ba5b-a5333e9e7b67" class="image"><a href="https://netway.co.th/images/kb/115001392371/mceclip0.png"><img src="https://netway.co.th/images/kb/115001392371/mceclip0.png"/></a></figure><p id="999dcf0b-281b-45a3-8f5a-8bd9475146bd" class="">6. ยืนยันและดำเนินการติดตั้ง WordPress โดยคลิ๊กที่ปุ่ม</p><figure id="eb5c3f80-71cc-4b11-abdd-d58097d6bff7" class="image"><a href="https://netway.co.th/images/kb/115001388692/mceclip3.png"><img style="width:240px" src="https://netway.co.th/images/kb/115001388692/mceclip3.png"/></a></figure><figure id="a1919260-596b-48fe-85f8-5130899306f7" class="image"><a href="https://netway.co.th/images/kb/115001392851/mceclip2.png"><img src="https://netway.co.th/images/kb/115001392851/mceclip2.png"/></a></figure><p id="0878f1e3-bee0-43e7-a06f-628642c2730d" class="">7. ใส่รายละเอียดในการเชื่อมต่อกับ Database ของคุณที่สร้างไว้ เมื่อใส่ข้อมูลเรียบร้อยคลิ๊กที่ปุ่ม</p><figure id="429a9892-3b18-4539-a60b-7ae6ce9c3d2c" class="image"><a href="https://netway.co.th/images/kb/115001392991/mceclip7.png"><img style="width:192px" src="https://netway.co.th/images/kb/115001392991/mceclip7.png"/></a></figure><figure id="0b5ba34a-65b4-4ce7-8a2e-610e7a738894" class="image"><a href="https://netway.co.th/images/kb/115001388792/mceclip6.png"><img src="https://netway.co.th/images/kb/115001388792/mceclip6.png"/></a></figure><p id="beeabfce-62f7-4686-a4f8-7216c3bd8e2e" class="">ให้ใส่</p><p id="41560f6c-9d69-4edf-a13e-a4dbd2cb8a9a" class=""><strong>Database Name:</strong></p><p id="74589676-9c1c-41cc-bee3-2b9cb8336f56" class="">wordpress</p><p id="cdd9bf95-124f-4f38-81fc-35c910afe1c4" class=""><strong>Username:</strong></p><p id="3fecb4b9-0fd7-45bb-b10f-33c1540a40d8" class="">root</p><p id="5afe6b9f-84a3-4b4a-a472-36aac5701fa5" class=""><strong>Password:</strong></p><p id="0b06ed39-d9d4-4fe1-835b-c14980113554" class="">(เว้นว่างเอาไว้)</p><p id="3f8c143c-d778-49da-afbd-23da0fda89e0" class=""><strong>Database Host:</strong></p><p id="85397f1c-3bb8-4364-a421-b2849af7fe87" class="">localhost</p><p id="c17de8b9-929d-449e-b4ce-bcd31716210d" class=""><strong>Table Prefix:</strong></p><p id="3f54642c-f2d4-4d40-b0f4-5beba9112d1f" class="">wp_  (ให้ระบุเป็น Default)8. ใส่รายละเอียดเบื้องต้นสำหรับข้อมูลเวบไซต์ และตั้งค่าของผู้ดูแลเวบไซต์ เมื่อใส่ข้อมูลเรียบร้อยคลิ๊กที่ปุ่ม</p><figure id="5efbc95c-d2a2-4ff0-ad61-214608c3ce25" class="image"><a href="https://netway.co.th/images/kb/115001393051/mceclip2.png"><img style="width:192px" src="https://netway.co.th/images/kb/115001393051/mceclip2.png"/></a></figure><figure id="f22e7ef7-ccac-479c-aa2f-a5fa04451eac" class="image"><a href="https://netway.co.th/images/kb/115001393011/mceclip0.png"><img src="https://netway.co.th/images/kb/115001393011/mceclip0.png"/></a></figure><p id="98828da7-1915-4ede-8026-cb43c9b64485" class="">ให้ใส่</p><p id="f418839c-8f42-4ad4-8952-32bb514b1978" class=""><strong>Site Title:</strong></p><p id="6da4aabb-4c92-4298-80ed-29c87f520ac1" class="">แนะนำให้ใส่ชื่อเวบไซต์ของคุณ เช่น(trainphp.com)</p><p id="952356b2-d2a3-4041-9106-23a457b644ce" class=""><strong>Username:</strong></p><p id="f356e51e-2e5f-4e1d-8069-f462a15b0fa3" class="">สร้างชื่อผู้ดูแลไซต์ (admin)</p><p id="83d7ba69-f170-45f7-b6fd-785ba1ba34c5" class=""><strong>Password:</strong></p><p id="4218c533-5df1-4b2f-a263-fc34d5155ab0" class="">12345678</p><p id="30528ff7-b725-4151-98f9-c95e54db41ad" class=""><strong>Your Email:</strong></p><p id="c1564b39-f692-438b-b70c-e4966a97edd1" class="">ใส่ชื่ออีเมลของคุณ</p><p id="b567d58b-1d5b-4927-af5f-a260a2a96c2e" class=""><strong>Privacy –</strong> ไม่ต้องติ๊กถูก เนื่องจากเราไม่ได้ online จริง(ตรงนี้เป็นการอนุญาตให้ search engine เข้ามาเก็บข้อมูลหรือไม่ เอาไว้ย้ายขึ้น hosting จริง ก็ค่อยไปติ๊กเลือกอนุญาตทีหลังใน Settings ที่หลังบ้านได้)</p><p id="578d6ed0-a418-497e-8857-bacd6107398e" class="">เสร็จแล้วคลิก<strong> Install WordPress</strong></p><p id="5f79dc51-f835-40d8-92a3-09f1dcbe8045" class="">
+</p><figure id="8096b2ea-2923-49bb-aa1b-33bcff2b12df" class="image"><a href="https://www.webmonsterlab.com/wp-content/uploads/2014/06/install-wordpress-xampp-20-border.jpg"><img src="https://www.webmonsterlab.com/wp-content/uploads/2014/06/install-wordpress-xampp-20-border.jpg"/></a></figure><p id="c3bf69f7-8bfe-4b92-b88c-cb384e41e481" class="">
+</p><h1 id="f5a2f801-cf36-4bc6-a698-40f6e54fa812" class=""><strong>Step 3 : Login เข้า WordPress เป็นอันเสร็จเรียบร้อย :)</strong></h1><ul id="74aba609-4421-4c88-939f-84d339e010ee" class="bulleted-list"><li style="list-style-type:disc">ครั้งต่อไปเวลาเข้าหน้า Login ก็ใช้ url นี้ http://localhost/wp-login.php (เอา <strong>wp-login.php</strong> มาต่อท้าย)</li></ul><ul id="f6b8713d-1d25-42a5-9c47-4ff99cc2f0f0" class="bulleted-list"><li style="list-style-type:disc">ตัวอย่าง http://localhost]/wp-login.php</li></ul><p id="79071949-a3c4-4813-b16b-6c508446798b" class="">
+</p><p id="d1b441be-ec65-4d99-b1e8-78d35affd52d" class="">
+</p><hr id="d72d07e0-0abb-4d59-9bd2-cf622bbad10f"/><p id="0694999d-0b55-41a4-8a3e-7dbaf6b45347" class="">
+</p><p id="f8904cd7-f9de-4ea4-9de5-933ddf77755c" class="">
+</p><p id="1a0cea0c-36c7-409f-a622-aad6cf05c353" class="">
+</p><h1 id="20ca578f-3625-4ff1-8292-f4b61c18e68d" class=""><strong><strong>Step 4 :วิธีใช้งานปลั๊กอิน All in one WP Migration</strong></strong></h1><p id="a121da12-a948-4fa8-8252-e633e42a4b60" class="">
+</p><p id="3bc2eef6-9b43-48be-bebb-7036510c4a04" class="">
+</p><p id="2b650507-85d4-48e7-a480-624e4dc262a8" class="">1. ไปที่เมนู Plugins &gt; Add New  เพื่อเพิ่มปลั๊กอินใหม่ (ดังรูป)</p><div id="863209c4-019a-4f9a-8225-84652d68e967" class="column-list"><div id="7afec9cf-f30d-45e8-aa2a-65543b69c248" style="width:62.5%" class="column"><figure id="9bceb8be-9572-4e56-8914-c3e34cd13c3f" class="image"><a href="work%2014269d137c254048a1e7539d7f5f293e/Untitled%204.png"><img style="width:288px" src="work%2014269d137c254048a1e7539d7f5f293e/Untitled%204.png"/></a></figure><p id="c036126a-a19d-4e0c-a881-ad50b23b76a5" class="">
+</p></div><div id="f94961c6-e103-4d6a-8862-90e788a883c1" style="width:37.50000000000001%" class="column"><figure id="4ca8364b-a3ce-4629-95a3-debeaa10ece6" class="image"><a href="work%2014269d137c254048a1e7539d7f5f293e/Untitled%205.png"><img style="width:166px" src="work%2014269d137c254048a1e7539d7f5f293e/Untitled%205.png"/></a></figure></div></div><p id="935d94ff-845d-4c64-8ed6-2e86aacf5c3a" class="">2.ไปที่อัปโหลดปลั๊กอิน </p><figure id="1762ed16-75b1-4dd5-8b7b-495376d7d7d3" class="image"><a href="work%2014269d137c254048a1e7539d7f5f293e/Untitled%206.png"><img style="width:769px" src="work%2014269d137c254048a1e7539d7f5f293e/Untitled%206.png"/></a></figure><p id="b980bf68-0ceb-44d4-a8de-edcd12e6858d" class="">3.ทำการเลือก ไฟล์  ปลั๊กอิน แล้วกดติดตั้ง</p><figure id="99542da4-506e-40bf-a321-3a645fc4f361" class="image"><a href="work%2014269d137c254048a1e7539d7f5f293e/Untitled%207.png"><img style="width:723px" src="work%2014269d137c254048a1e7539d7f5f293e/Untitled%207.png"/></a></figure><p id="3a3b258f-83f2-4853-a827-11f617a75641" class="">
+</p><figure id="b81641ca-2157-433b-8012-3e108638a865" class="image"><a href="work%2014269d137c254048a1e7539d7f5f293e/Untitled%208.png"><img style="width:964px" src="work%2014269d137c254048a1e7539d7f5f293e/Untitled%208.png"/></a></figure><p id="e0599219-bd3b-4fd7-af37-b7994e62cb67" class="">
+</p><figure id="b39445b1-354f-476a-871e-34b0b6262554" class="image"><a href="work%2014269d137c254048a1e7539d7f5f293e/Untitled%209.png"><img style="width:741px" src="work%2014269d137c254048a1e7539d7f5f293e/Untitled%209.png"/></a></figure><p id="85c38641-7255-4d73-917e-2ff1c94a74e6" class="">4.ทำการเปิดการใช้งาน ปลั๊กอิน </p><figure id="9d68748b-89f0-47d2-aeea-07efd8fc998d" class="image"><a href="work%2014269d137c254048a1e7539d7f5f293e/Untitled%2010.png"><img style="width:903px" src="work%2014269d137c254048a1e7539d7f5f293e/Untitled%2010.png"/></a></figure><p id="37afbd15-e0a0-4248-af59-af875f3370a8" class="">
+</p><p id="cf1144ae-74cf-4187-8a83-1dc8d8e503c7" class="">
+</p><h1 id="ae2958b5-e1f9-4daa-a4cf-190370758c21" class=""><strong>Step 5 :วิธี restore เว็บ WordPress ด้วยปลั๊กอิน All in one WP Migration</strong></h1><ol type="1" id="4b68d8fd-b88d-43a3-bd08-c5a52ef27e27" class="numbered-list" start="1"><li>เลื่อนเม้าส์ไปที่เมนู All in one WP Migration แล้วคลิกเลือก<strong> Import</strong> ดังรูป<figure id="5d35fd59-cbfe-44fa-a899-8d9d20ef7209" class="image"><a href="https://cowmein.com/wp-content/uploads/2019/03/go-to-import-menu-all-in-one-wp-migration.jpg"><img src="https://cowmein.com/wp-content/uploads/2019/03/go-to-import-menu-all-in-one-wp-migration.jpg"/></a></figure><ol type="1" id="3a041c7d-96bd-4731-91c3-0778947252a0" class="numbered-list" start="2"><li>เมื่อเรามาที่หน้า Import  <strong>คลิกที่ Import from แล้วคลิกเลือก File</strong>
+ ดังรูป</li></ol></li></ol><figure id="1cd04e2c-067b-4bee-b8bc-cb72fd1112b2" class="image"><a href="work%2014269d137c254048a1e7539d7f5f293e/Untitled%2011.png"><img style="width:654px" src="work%2014269d137c254048a1e7539d7f5f293e/Untitled%2011.png"/></a></figure><p id="81ec0110-eef7-4e44-b3db-c34f95d685e0" class="">
+</p><ol type="1" id="6be4b742-f2bf-4be5-b72b-3bc18115cd84" class="numbered-list" start="1"><li>จากนั้นให้เราคลิกเลือกไฟล์ Export ที่เรา save ไว้ พอเราคลิกเลือกไฟล์แล้ว ระบบจะดำเนินการ Import ไฟล์เว็บจนครบ 100% หลังจากนั้น ระบบจะแสดงข้อความแจ้งเตือนว่า ตอนนี้ระบบจะ import ทับข้อมูลเก่า หากต้องการ backup ข้อมูลเก่าเก็บเอาไว้ ให้ทำการ backup ให้เรียบร้อยเสียก่อนที่จะทำการ import  หากเราทำเรียบร้อยแล้ว ให้คลิกปุ่ม Proceed ดังรูป<figure id="167bbfdd-ae1e-430d-904d-325f9135e2a6" class="image"><a href="https://cowmein.com/wp-content/uploads/2019/03/click-proceed-button-at-import-notification.jpg"><img src="https://cowmein.com/wp-content/uploads/2019/03/click-proceed-button-at-import-notification.jpg"/></a></figure></li></ol><ol type="1" id="8ed7f0dc-40a1-4bd6-8270-a0f3cfe56ec8" class="numbered-list" start="2"><li>ระบบจะแสดงความคืบหน้าในการ Import เว็บไซต์ ดังรูปด้านล่าง<figure id="59b48388-e250-4b3f-bcad-e70f7852ffac" class="image"><a href="https://cowmein.com/wp-content/uploads/2019/03/importing-all-in-one-wp-migration.jpg"><img src="https://cowmein.com/wp-content/uploads/2019/03/importing-all-in-one-wp-migration.jpg"/></a></figure></li></ol><ol type="1" id="5bb98f40-7f43-47ab-af4f-c02574230f21" class="numbered-list" start="3"><li>เมื่อระบบทำการ Import เสร็จแล้ว ให้เราทำการ กด โหลดหน้านี้ใหม่ แล้วเป็นอันเสร็จสิ้น</li></ol><p id="959aeac9-6ece-4a66-954e-cf0fbdbb2fcd" class="">
+</p></div></article></body></html>
